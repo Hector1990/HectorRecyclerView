@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Recyclerview</string>
+
+    <string name="state_normal">下拉刷新</string>
+    <string name="state_on_move">释放以刷新</string>
+    <string name="state_refreshing">刷新中</string>
+    <string name="state_complete">刷新完成</string>
+    <string name="hint_time">最后更新于: </string>
+
+    <string name="time_just_now">刚刚</string>
+    <string name="time_seconds_ago">秒前</string>
+    <string name="time_minutes_ago">分钟前</string>
+    <string name="time_hours_ago">小时前</string>
+    <string name="time_days_ago">天前</string>
+    <string name="time_months_ago">月前</string>
+    <string name="time_years_ago">年前</string>
+
+    <string name="footer_state_normal">加载更多</string>
+    <string name="footer_state_loading">加载中</string>
+    <string name="footer_state_no_more">无更多数据</string>
+</resources>

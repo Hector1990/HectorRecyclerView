@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@android:color/background_light"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp">
+
+        <ProgressBar
+            android:id="@+id/header_pb"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/header_iv_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/header_iv_indicator">
+
+            <TextView
+                android:id="@+id/header_tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/state_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/header_tv_time_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/header_tv_state"
+                android:layout_below="@id/header_tv_state"
+                android:layout_marginTop="3dp"
+                android:text="@string/hint_time"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/header_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_tv_state"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/header_tv_time_hint"
+                android:text="@string/hint_time"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
