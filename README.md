@@ -10,7 +10,7 @@ A RecyclerView that implements pull to refresh and load more, it also supports a
 
 ## Usage
 
-The usage is as same as the general recyclerview.
+The usage is as same as the general recyclerview. I will continue updating the view to support more functions.
 
 ### Notice
 #### SetListener
