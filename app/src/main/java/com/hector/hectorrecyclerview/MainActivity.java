@@ -11,6 +11,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     HectorRecyclerView recyclerView;
+    List<String> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
-        List<String> data = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        data = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
             data.add("item" + i);
         }
-        MyAdapter adapter = new MyAdapter(data);
+        final MyAdapter adapter = new MyAdapter(data);
         recyclerView.setAdapter(adapter);
         recyclerView.setListener(new HectorRecyclerView.RefreshListener() {
             @Override
@@ -42,8 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        recyclerView.loadComplete();
-                        recyclerView.noMoreData();
+                        if (data.size() >= 40) {
+                            recyclerView.noMoreData();
+                        }
+                        else {
+                            for (int i = 20; i < 40; i++) {
+                                data.add("item" + i);
+                            }
+                            adapter.notifyDataSetChanged();
+                            recyclerView.loadComplete();
+                        }
                     }
                 }, 1000);
             }
